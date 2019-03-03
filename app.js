@@ -6,6 +6,7 @@ const morgan = require('morgan')
 
 // импорт роутов сущностей из соответствующих модулей
 const userRoutes = require('./routes/user')
+const productRoutes = require('./routes/product')
 
 // импорт ключей из конфига
 const keys = require('./config/keys')
@@ -32,5 +33,6 @@ app.use(cors())
 
 // регистрация роутов в приложении
 app.use('/api/user', userRoutes)
+app.use('/api/product', productRoutes)
 
 module.exports = app
