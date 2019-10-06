@@ -44,7 +44,7 @@ module.exports.update = async function (request, response) {
       // первый параметр - условие по которому происходит поиск
       {_id: request.params.id},
       // второй параметр - ключ изменяемого поля
-      {$set:request.body},
+      {$set: request.body},
       // третий параметр указывает на необходимость вернуть измененную запись
       {new: true}
     )

@@ -6,7 +6,7 @@ const Schema = mongoose.Schema
 
 // инициализация схемы текущей модели
 const userSchema = new Schema({
-	productName: {
+  productName: {
     type: String,
     required: true
   },

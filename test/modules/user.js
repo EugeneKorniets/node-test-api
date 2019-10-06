@@ -2,7 +2,7 @@
 const chai = require('chai')
 const chaiHttp = require('chai-http')
 const server = 'http://localhost:3030/api'
-const expect = chai.expect;
+const expect = chai.expect
 
 chai.use(chaiHttp)
 
@@ -34,7 +34,7 @@ describe('USER endpoint', () => {
         })
     })
   })
-  
+
   describe('/POST user', () => {
     it('Создание нового пользователя (POST)', (done) => {
       chai.request(server)
@@ -54,7 +54,7 @@ describe('USER endpoint', () => {
         })
     })
   })
-  
+
   describe('/GET user by id', () => {
     it('Получение пользователя по ID (GET)', (done) => {
       chai.request(server)
@@ -70,7 +70,7 @@ describe('USER endpoint', () => {
         })
     })
   })
-  
+
   describe('/PATCH user by id', () => {
     it('Обновление полей пользователя по ID (PATCH)', (done) => {
       chai.request(server)
@@ -88,7 +88,7 @@ describe('USER endpoint', () => {
         })
     })
   })
-  
+
   describe('/DELETE user by id', () => {
     it('Удаление пользователя по ID (DELETE)', (done) => {
       chai.request(server)

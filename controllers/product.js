@@ -26,8 +26,8 @@ module.exports.getByProductId = async function (request, response) {
 module.exports.create = async function (request, response) {
   const product = new Product({
     productName: request.body.productName,
-		vendorCode: request.body.vendorCode,
-		prices: request.body.prices
+    vendorCode: request.body.vendorCode,
+    prices: request.body.prices
   })
   try {
     await product.save()
@@ -43,7 +43,7 @@ module.exports.update = async function (request, response) {
       // первый параметр - условие по которому происходит поиск
       {_id: request.params.id},
       // второй параметр - ключ изменяемого поля
-      {$set:request.body},
+      {$set: request.body},
       // третий параметр указывает на необходимость вернуть измененную запись
       {new: true}
     )
